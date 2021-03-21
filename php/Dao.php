@@ -16,6 +16,12 @@ class Dao {
   private function getConnection () {
     try {
         $connection = new PDO($this->dsn, $this->user, $this->password);
+      
+        $sql = "INSERT INTO votes (time_cast, candidate) VALUES (NOW(), :voteValue)";
+        $statement = $conn->prepare($sql);
+        $statement->bindParam('voteValue', $value);
+        $res = $statement->execute();
+      
         $this->logger->LogDebug("Got a connection");
     } catch (PDOException $e) {
         $error = 'Connection failed: ' . $e->getMessage();
