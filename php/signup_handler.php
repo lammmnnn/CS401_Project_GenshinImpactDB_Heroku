@@ -6,21 +6,21 @@
   $email = $_POST['email'];
 
   // check the email and password
-  require_once '../api/Dao.php';
+  require_once 'Dao.php';
   $dao = new Dao();
 
   if ($dao->emailExist($email)) {
     $_SESSION['emailexist'] = true;
     $_SESSION['form_data'] = $_POST;
-    header('Location: /api/signup.php');
+    header('Location: /php/signup.php');
     exit;
   } else if ($dao->userExist($username)) {
     $_SESSION['usernameexist'] = true;
     $_SESSION['form_data'] = $_POST;
-    header('Location: /api/signup.php');
+    header('Location: /php/signup.php');
     exit;
   } else {
     $dao->createUser($username, $password, $email);
-    header('Location: /api/login.php');
+    header('Location: /php/login.php');
     exit;
   }
