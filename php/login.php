@@ -35,7 +35,7 @@
     	</section>
     	<section class="auth-content">
     		<h4>Sign In with Username</h4>
-    			<form id="loginform" method="POST" action="../handler/login_handler.php">
+    			<form id="loginform" method="POST" action="login_handler.php">
       			<div class="input-container">
       				<input value="<?php echo isset($_SESSION['form_data']['username']) ? $_SESSION['form_data']['username'] : '' ;
               unset($_SESSION['form_data']); ?>" type="text" name="username" id="username" required="">
