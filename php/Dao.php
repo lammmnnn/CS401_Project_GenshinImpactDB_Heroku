@@ -4,9 +4,9 @@ require_once 'KLogger.php';
 
 class Dao {
 
-  public $dsn = 'mysql:dbname=genshindb;host=34.106.159.192';
-  public $user = "root";
-  public $password = "123456";
+  public $dsn = 'mysql:dbname=heroku_0e8876a7d92cfcb;host=us-cdbr-east-03.cleardb.com';
+  public $user = "b526e66a7b56a1";
+  public $password = "3f745a44";
   protected $logger;
 
   public function __construct () {
