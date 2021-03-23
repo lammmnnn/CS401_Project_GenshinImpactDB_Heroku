@@ -36,7 +36,7 @@
     	</section>
     	<section class="auth-content">
     		<h4>Register without Social Account</h4>
-    			<form name="signupform" id="signupform" method="POST" action="../handler/signup_handler.php" onsubmit="return validated()">
+    			<form name="signupform" id="signupform" method="POST" action="signup_handler.php" onsubmit="return validated()">
             <div class="input-container">
               <input value="<?php echo isset($_SESSION['form_data']['email']) ? $_SESSION['form_data']['email'] : '' ; ?>"
                type="email" name="email" id="email" onfocus="hide_errmsg()" onfocusout="validateEmail()" required>
