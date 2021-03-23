@@ -12,7 +12,7 @@
   $_SESSION['authenticated'] = $dao->loginMatch($username, $password);
 
   if ($_SESSION['authenticated']) {
-    header('Location: /php/index.php');
+    header('Location: ../php/index.php');
     exit;
   } else {
     $_SESSION['loginError'] = true;
