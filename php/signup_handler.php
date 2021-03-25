@@ -6,7 +6,7 @@
   $email = $_POST['email'];
 
   // check the email and password
-  require_once 'Dao.php';
+  require_once '/php/Dao.php';
   $dao = new Dao();
 
   if ($dao->emailExist($email)) {
