@@ -6,12 +6,14 @@
 
   // check the email and password
   
+  require_once "/php/Dao.php";
+  $dao = new Dao();
 
   $_SESSION['form_data'] = $_POST;
-  $_SESSION['authenticated'] = true;
+  $_SESSION['authenticated'] = $dao->loginMatch($username, $password);
 
   if ($_SESSION['authenticated']) {
-    header('Location: /php/index.php');
+    header('Location: /index.php');
     exit;
   } else {
     $_SESSION['loginError'] = true;
