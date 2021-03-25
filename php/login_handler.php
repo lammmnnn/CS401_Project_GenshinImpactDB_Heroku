@@ -1,4 +1,3 @@
-
 <?php
   session_start();
 
@@ -6,7 +5,7 @@
   $password = $_POST['password'];
 
   // check the email and password
-  require_once 'Dao.php';
+  require_once '/php/Dao.php';
   $dao = new Dao();
 
   $_SESSION['form_data'] = $_POST;
@@ -20,7 +19,3 @@
     header('Location: /php/login.php');
     exit;
   }
-?>
-<!DOCTYPE php>
-<html>
-</html>
