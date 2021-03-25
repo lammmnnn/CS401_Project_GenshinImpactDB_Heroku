@@ -13,7 +13,7 @@ class Dao {
     $this->logger = new KLogger ( "log.txt" , KLogger::DEBUG );
   }
 
-  private function getConnection () {
+  public function getConnection () {
     try {
         $connection = new PDO($this->dsn, $this->user, $this->password);
       
@@ -30,7 +30,7 @@ class Dao {
     return $connection;
   }
 
-  public function loginMatch ($username, $password) {
+  public function loginMatch($username, $password) {
     $connection = $this->getConnection();
     try {
         $q = $connection->prepare("select count(*) as total from user_table where username = :username and password = :password");
