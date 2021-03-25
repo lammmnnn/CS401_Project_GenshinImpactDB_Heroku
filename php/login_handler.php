@@ -7,7 +7,7 @@
   // check the email and password
   
   require_once "/php/Dao.php";
-  $dao = new Dao();
+  
   header('Location: /php/login.php');
     exit;
   
