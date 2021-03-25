@@ -9,7 +9,7 @@
   $dao = new Dao();
 
   $_SESSION['form_data'] = $_POST;
-  $_SESSION['authenticated'] = true;
+  $_SESSION['authenticated'] = $dao->loginMatch($username, $password);
 
   if ($_SESSION['authenticated']) {
     header('Location: /index.php');
