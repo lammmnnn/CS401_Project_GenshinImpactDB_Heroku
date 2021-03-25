@@ -9,7 +9,15 @@
   $dao = new Dao();
 
   $_SESSION['form_data'] = $_POST;
-header('Location: /index.php');
+  $_SESSION['authenticated'] = true;
+
+  if ($_SESSION['authenticated']) {
+    header('Location: /index.php');
     exit;
+  } else {
+    $_SESSION['loginError'] = true;
+    header('Location: /php/login.php');
+    exit;
+  }
  
  
