@@ -11,12 +11,3 @@
   $_SESSION['form_data'] = $_POST;
   $_SESSION['authenticated'] = $dao->loginMatch($username, $password);
 
-  if ($_SESSION['authenticated']) {
-    header('Location: /php/index.php');
-    exit;
-  } else {
-    $_SESSION['loginError'] = true;
-    header('Location: /php/login.php');
-    exit;
-  }
-?>
