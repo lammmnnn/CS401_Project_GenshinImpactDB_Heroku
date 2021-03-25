@@ -13,15 +13,9 @@ class Dao {
     $this->logger = new KLogger ( "log.txt" , KLogger::DEBUG );
   }
 
-  public function getConnection () {
+  private function getConnection () {
     try {
         $connection = new PDO($this->dsn, $this->user, $this->password);
-      
-        $sql = "INSERT INTO votes (time_cast, candidate) VALUES (NOW(), :voteValue)";
-        $statement = $conn->prepare($sql);
-        $statement->bindParam('voteValue', $value);
-        $res = $statement->execute();
-      
         $this->logger->LogDebug("Got a connection");
     } catch (PDOException $e) {
         $error = 'Connection failed: ' . $e->getMessage();
@@ -30,7 +24,7 @@ class Dao {
     return $connection;
   }
 
-  public function loginMatch($username, $password) {
+  public function loginMatch ($username, $password) {
     $connection = $this->getConnection();
     try {
         $q = $connection->prepare("select count(*) as total from user_table where username = :username and password = :password");
