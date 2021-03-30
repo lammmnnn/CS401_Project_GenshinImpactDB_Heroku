@@ -17,10 +17,7 @@ $('.sidenav-button').click(function(){
   request = $.ajax({
     url: "/handler/character_handler.php",
     type: "POST",
-    data: { currentChar: cur },
-    success: function (data) {
-      console.log(cur);
-    }
+    data: { currentChar: cur }
   });
 $('.content').load('char_info.php');
 });
