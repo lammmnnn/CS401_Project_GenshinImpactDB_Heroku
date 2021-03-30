@@ -112,6 +112,17 @@ class Dao {
     $q->execute();
   }
 
+  public function getCharacters () {
+    $connection = $this->getConnection();
+    try {
+        $rows = $connection->query("select * from character_table order by name", PDO::FETCH_ASSOC);
+    } catch(Exception $e) {
+      echo print_r($e,1);
+      exit;
+    }
+    return $rows;
+  }
+
   public function getComments () {
     $connection = $this->getConnection();
     try {
