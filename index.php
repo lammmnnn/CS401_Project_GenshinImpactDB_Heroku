@@ -7,7 +7,6 @@
     <title>Genshin Impact Database | XLK</title>
     <link rel="shortcut icon" type="image/jpg" href="../img/favicon.ico">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
   <div id="navbar">
