@@ -101,9 +101,15 @@
     </section>
   </main>
 
-  <div class="footer">
-    <p>Footer</p>
-  </div>
+  <footer class="footer">
+    <hr>
+    <ul class="footer__nav">
+      <a href="/about"> About </a>
+      <a href="/contact"> Contact </a>
+      <a href="/disclaimer"> Disclaimer </a>
+    </ul>
+    <p><span>©&nbsp;2021&nbsp; Genshin Impact Database</span></p>
+  </footer>
 
 <!--  <script>resetCookies();</script>  -->
 
