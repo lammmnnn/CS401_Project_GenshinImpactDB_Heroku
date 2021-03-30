@@ -1,40 +1,22 @@
-<!DOCTYPE php>
 <?php
   session_start();
 ?>
-
+<!DOCTYPE php>
 <html>
 <head>
     <title>Genshin Impact Database | XLK</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" type="image/jpg" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-  <div class="topnav">
-    <div class="logo">
-      <a href="index.php"><img src="/img/mainlogo2.png" height="64" alt=''></a>
-    </div>
-    <h2>Database by <span style="color: #007BEF;">XLK</span></h2>
-    <div class="loginbutton<?php echo isset($_SESSION['form_data'])
-     ? ' dropdown'  : '' ; ?>">
-    <a <?php echo isset($_SESSION['form_data'])
-     ? 'style="text-decoration: underline;">' . $_SESSION['form_data']['username']
-      : 'href="/php/login.php">Log In' ; ?></a>
-    <div class="dropdown-content">
-      <a href="/php/user_setting.php">Profile Setting</a>
-      <a href="/handler/logout_handler.php">Log out</a>
-    </div>
-    </div>
-  </div>
   <div id="navbar">
+    <div class="logo">
+      <a href="/index.php"><img src="../img/mainlogo2.png" height="46" alt=''></a>
+    </div>
     <div class="items">
       <a class="button first active">HOME</a>
-      <div class="dropdown">
-        <a class="button">CHARACTERS</a>
-        <div class="dropdown-content">
-          <a href="/php/pcharacter.php">Playable Characters</a>
-          <a href="/php/ucharacter.php">Unreleased Characters</a>
-        </div>
-      </div>
+      <a href="/php/character.php" class="button">CHARACTERS</a>
       <div class="dropdown">
         <a class="button">ITEMS</a>
         <div class="dropdown-content">
@@ -45,20 +27,78 @@
       <a href="" class="button">DPS CALCULATOR</a>
       <a href="" class="button">WORLD MAP</a>
     </div>
-
-    <div class="search">
-      <input type="search" placeholder="Search">
-      <label class="icon">
-        <span class="fas fa-search"></span>
-      </label>
+    <div class="login-div <?php echo isset($_SESSION['form_data'])
+     ? ' dropdown'  : '' ; ?>">
+      <a class="login-button" <?php echo isset($_SESSION['form_data'])
+       ? 'style="text-decoration: underline;">' . $_SESSION['form_data']['username']
+        : 'href="/php/login.php">Sign in' ; ?></a>
+      <div class="dropdown-content">
+        <a href="/php/user_setting.php">Profile Setting</a>
+        <a href="/handler/logout_handler.php">Log out</a>
+      </div>
     </div>
 
   </div>
-  <main>
-  <div>
+  <main class="blur-bg">
+    <div class="sidebar">
+      <div class="scrollbar">
+        <div class="sb-padding">
+          <div class="sidebar-content">
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <section class="content">
 
-  </div>
+      <div class="panel">
+        <div class="boarder">
+          <table>
+            <tr><th><h1>Welcome to Genshin Impact Database!</h1></th></tr>
+            <tr>
+            <td>
+            <p><a target="_blank" rel="nofollow noreferrer noopener" class="external text"
+              href="https://genshin.mihoyo.com">Official Website</a> • <a target="_blank" rel="nofollow noreferrer noopener"
+              class="external text" href="https://genshin.mihoyo.com/en/news">Official News</a> • <a href="" class="mw-redirect"
+              title="Genshin Impact Wiki:About">About</a></p>
+
+            <p><b><a href="/wiki/Genshin_Impact" title="Genshin Impact">Genshin Impact</a></b> is an open-world, action RPG
+              developed and published by miHoYo for PC, iOS/Android, and PS4 platforms. The game is Free-to-Play with a Gacha
+              monetization system in the form of <a href="/wiki/Wishes" title="Wishes">Wishes</a>.<br>
+            This wiki is an English resource for information about the Global version of the game.</p>
+
+            <p><b>Please read the <a href="/wiki/Special:Community" title="Special:Community">Community Page</a> before
+              editing!</b></p>
+            </td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="w100">
+          <h3>current banners</h3>
+          <hr>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="board divide2">
+          <div class="board-body text-center">
+            <img class="image" src="../img/Banners/currentCharBanner.jpg" alt='' width="1080" height="533">
+            <hr>
+            Duration: 16/3/2021 - 6/4/2021
+          </div>
+        </div>
+        <div class="board divide2">
+          <div class="board-body text-center">
+            <img class="image" src="../img/Banners/currentWeaponBanner.jpg" alt='' width="1080" height="533">
+            <hr>
+            Duration: 16/3/2021 - 6/4/2021
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
   </main>
 
   <div class="footer">
