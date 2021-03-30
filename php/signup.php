@@ -7,12 +7,14 @@
 <html>
 <head>
     <title>Sign up | GI Database</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body class="userauthen">
   <div class="topnav">
     <div class="logo">
-      <a href="/index.php"><img src="/img/mainlogo2.png" height="64" alt=''></a>
+      <a href="/index.php"><img src="/img/mainlogo2.png" height="50" alt=''></a>
     </div>
     <h2>Database by <span style="color: #007BEF;">XLK</span></h2>
   </div>
@@ -26,7 +28,7 @@
 		</header>
     <div id="content">
     	<section class="auth-content">
-    		<h4>Sign in with a Social Account</h4>
+    		<h6>Sign in with a Social Account</h6>
     			<a class="signup provider-google" href="#"
            data-crumb="SOmrNbjiQVY_bHRzL9tOtNawcwK5y4EObY7BSDKMoa4"
            data-google-uri="/signin?method=google">
@@ -35,8 +37,8 @@
     			</a>
     	</section>
     	<section class="auth-content">
-    		<h4>Register without Social Account</h4>
-    			<form name="signupform" id="signupform" method="POST" action="signup_handler.php" onsubmit="return validated()">
+    		<h6>Register without Social Account</h6>
+    			<form name="signupform" id="signupform" method="POST" action="/handler/signup_handler.php" onsubmit="return validated()">
             <div class="input-container">
               <input value="<?php echo isset($_SESSION['form_data']['email']) ? $_SESSION['form_data']['email'] : '' ; ?>"
                type="email" name="email" id="email" onfocus="hide_errmsg()" onfocusout="validateEmail()" required>

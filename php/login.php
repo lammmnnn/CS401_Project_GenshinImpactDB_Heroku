@@ -6,12 +6,14 @@
 <html>
 <head>
     <title>Sign in | GI Database</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body class="userauthen">
   <div class="topnav">
     <div class="logo">
-      <a href="/index.php"><img src="/img/mainlogo2.png" height="64" alt=''></a>
+      <a href="/index.php"><img src="/img/mainlogo2.png" height="50" alt=''></a>
     </div>
     <h2>Database by <span style="color: #007BEF;">XLK</span></h2>
   </div>
@@ -25,7 +27,7 @@
 		</header>
     <div id="content">
     	<section class="auth-content">
-    		<h4>Sign in with a Social Account</h4>
+    		<h6>Sign in with a Social Account</h6>
     			<a class="signup provider-google" href="#"
            data-crumb="SOmrNbjiQVY_bHRzL9tOtNawcwK5y4EObY7BSDKMoa4"
            data-google-uri="/signin?method=google">
@@ -34,8 +36,8 @@
     			</a>
     	</section>
     	<section class="auth-content">
-    		<h4>Sign In with Username</h4>
-    			<form id="loginform" method="POST" action="login_handler.php">
+    		<h6>Sign In with Username</h6>
+    			<form id="loginform" method="POST" action="/handler/login_handler.php">
       			<div class="input-container">
       				<input value="<?php echo isset($_SESSION['form_data']['username']) ? $_SESSION['form_data']['username'] : '' ;
               unset($_SESSION['form_data']); ?>" type="text" name="username" id="username" required="">
@@ -53,8 +55,12 @@
         <?php
           if (isset($_SESSION['loginError'])) {
             echo "<small class='errorMessage' style='display: block;'>We don't recognize these credentials. Please try again.</small>";
+            unset($_SESSION['loginError']);
           }
-          unset($_SESSION['loginError']);
+          if (isset($_SESSION['success']) && $_SESSION['success']) {
+            echo "<small class='errorMessage' style='display: block; color: #16c100'>Your account has successfully created.</small>";
+            unset($_SESSION['success']);
+          }
         ?>
     	</section>
     </div>
