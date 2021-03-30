@@ -49,7 +49,7 @@
               <ul class="sidenav">
                 <div class="board text-center sidenav-head">Character List</div>
                 <?php
-                  require_once '/php/Dao.php';
+                  require_once 'Dao.php';
                   $dao = new Dao();
                   $characters = $dao->getCharacters();
 
