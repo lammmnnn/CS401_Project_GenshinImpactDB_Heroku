@@ -239,7 +239,7 @@ table {
   background-color: rgba(0,0,0,0.125);
 }
 .os-viewport {
-
+  height: 100%;
 }
 
 .sidebar-content {
