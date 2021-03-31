@@ -91,6 +91,10 @@ body {
   color: #000;
   opacity: 60%;
 }
+.black a {
+  color: #000;
+  opacity: 60%;
+}
 
 #content {
 	min-width: 700px;
