@@ -24,6 +24,20 @@ class Dao {
     return $connection;
   }
 
+  public function getUser ($username) {
+    $connection = $this->getConnection();
+    try {
+        $q = $connection->prepare("select username, email from user_table where username = :username");
+        $q->bindParam(":username", $username);
+        $q->execute();
+        $row = $q->fetch();
+    } catch(Exception $e) {
+      echo print_r($e,1);
+      exit;
+    }
+    return $row;
+  }
+
   public function loginMatch ($username, $password) {
     $connection = $this->getConnection();
     try {
