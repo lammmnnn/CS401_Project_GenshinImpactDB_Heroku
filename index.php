@@ -61,12 +61,12 @@
               class="external text" href="https://genshin.mihoyo.com/en/news">Official News</a> • <a href="" class="mw-redirect"
               title="Genshin Impact Wiki:About">About</a></p>
 
-            <p><b><a href="/wiki/Genshin_Impact" title="Genshin Impact">Genshin Impact</a></b> is an open-world, action RPG
+            <p><b><a title="Genshin Impact">Genshin Impact</a></b> is an open-world, action RPG
               developed and published by miHoYo for PC, iOS/Android, and PS4 platforms. The game is Free-to-Play with a Gacha
-              monetization system in the form of <a href="/wiki/Wishes" title="Wishes">Wishes</a>.<br>
+              monetization system in the form of <a title="Wishes">Wishes</a>.<br>
             This wiki is an English resource for information about the Global version of the game.</p>
 
-            <p><b>Please read the <a href="/wiki/Special:Community" title="Special:Community">Community Page</a> before
+            <p><b>Please read the <a title="Special:Community">Community Page</a> before
               editing!</b></p>
             </td></tr></tbody>
           </table>
