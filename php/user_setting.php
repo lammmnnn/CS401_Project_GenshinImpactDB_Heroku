@@ -12,7 +12,7 @@
 <body class="userauthen">
   <div class="topnav">
     <div class="logo">
-      <a href="/php/index.php"><img src="/img/mainlogo2.png" height="50" alt=''></a>
+      <a href="/index.php"><img src="/img/mainlogo2.png" height="50" alt=''></a>
     </div>
     <h2>Database by <span style="color: #007BEF;">XLK</span></h2>
     <div class="login-div <?php echo isset($_SESSION['username'])
