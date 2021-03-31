@@ -29,10 +29,10 @@
       <a href="" class="button">DPS CALCULATOR</a>
       <a href="" class="button">WORLD MAP</a>
     </div>
-    <div class="login-div <?php echo isset($_SESSION['form_data'])
+    <div class="login-div <?php echo isset($_SESSION['username'])
      ? ' dropdown'  : '' ; ?>">
-      <a class="login-button" <?php echo isset($_SESSION['form_data'])
-       ? 'style="text-decoration: underline;">' . $_SESSION['form_data']['username']
+      <a class="login-button" <?php echo isset($_SESSION['username'])
+       ? 'style="text-decoration: underline;">' . $_SESSION['username']
         : 'href="/php/login.php">Sign in' ; ?></a>
       <div class="dropdown-content">
         <a href="/php/user_setting.php">Profile Setting</a>
