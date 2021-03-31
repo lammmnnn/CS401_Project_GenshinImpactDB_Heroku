@@ -12,6 +12,9 @@
   $_SESSION['authenticated'] = $dao->loginMatch($username, $password);
 
   if ($_SESSION['authenticated']) {
+    unset($_SESSION['form_data']);
+    $_SESSION['username'] = $username;
+    $_SESSION['email'] = $dao->getUser($username)['email'];
     header('Location: /index.php');
     exit;
   } else {
