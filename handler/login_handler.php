@@ -2,7 +2,7 @@
   session_start();
 
   $username = $_POST['username'];
-  $password = $_POST['password'];
+  $password = hash('sha256', $_POST['password'] . "salting the salted".$username);
 
   // check the email and password
   require_once '../php/Dao.php';
