@@ -137,6 +137,34 @@ class Dao {
     return $rows;
   }
 
+  public function getWeapons ($type) {
+    $connection = $this->getConnection();
+    try {
+      $rows = $connection->query("select * from weapon_table", PDO::FETCH_ASSOC);
+      if (strlen($type) > 0) {
+        $rows = $connection->query("select * from weapon_table where type = '" . $type . "' order by rarity", PDO::FETCH_ASSOC);
+      }
+    } catch(Exception $e) {
+      echo print_r($e,1);
+      exit;
+    }
+    return $rows;
+  }
+
+  public function getMaterials ($type) {
+    $connection = $this->getConnection();
+    try {
+      $rows = $connection->query("select * from material_table", PDO::FETCH_ASSOC);
+      if (strlen($type) > 0) {
+        $rows = $connection->query("select * from material_table where type = '" . $type . "' order by rarity", PDO::FETCH_ASSOC);
+      }
+    } catch(Exception $e) {
+      echo print_r($e,1);
+      exit;
+    }
+    return $rows;
+  }
+
   public function getComments () {
     $connection = $this->getConnection();
     try {
