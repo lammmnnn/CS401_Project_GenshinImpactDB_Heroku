@@ -23,8 +23,6 @@
         </div>
       </div>
       <a href="" class="button second">GUIDES</a>
-      <a href="" class="button">DPS CALCULATOR</a>
-      <a href="" class="button">WORLD MAP</a>
     </div>
     <div class="login-div <?php echo isset($_SESSION['username'])
      ? ' dropdown'  : '' ; ?>">
