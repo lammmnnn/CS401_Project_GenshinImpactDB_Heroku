@@ -107,7 +107,6 @@ table {
 }
 
 #navbar div.items a {
-  cursor: pointer;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -263,24 +262,51 @@ table {
 	top: 30%;
 	left: 5%;
 }
+.nameblock2 {
+	position: absolute;
+	top: 30%;
+	right: 5%;
+  padding-left: 7%;
+}
 .character-element {
 	position: absolute;
 	top: 20%;
   left: 5%;
 }
-.sidenav>li>a {
+.sidenav>li>a, .toggle-items>li>a {
 	display: block;
   position: relative;
-	border-radius: 3px;
+	border-radius: 2px;
 }
-.sidenav li a:hover {
+.sidenav li a:hover, .toggle-items>li>a:hover {
 	background-color: rgba(200,200,200,0.07);
 }
-.sidenav>li {
+.sidenav>li, .toggle-items>li {
 	margin-bottom: 5px;
 }
-.sidenav li a.active {
+.sidenav li a.active, .toggle-items li a.active {
   background-color: rgba(220,220,220,0.15);
+}
+
+.sidenav li .toggle {
+  padding: 0.75rem 1rem 0.85rem;
+  position: relative;
+  border-radius: 2px;
+  transition: background-color 300ms,color 300ms;
+  display: block;
+  color: rgba(255,255,255,0.7);
+  font-family: 'HYWenHei-85W',cursive;
+}
+
+.toggle-items {
+  flex-direction: column;
+  transform: scaleY(1);
+  transform-origin: top;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.toggle-items>li {
+
 }
 
 /*=========== START ============*/
@@ -344,15 +370,24 @@ body {
 .userauthen {
 	background-image: linear-gradient(to right, #f6f6f6 , #f6f6f6);
 }
+.forum {
+  background-image: linear-gradient(to right, #f0f1f5 , #f0f1f5);
+  color: black;
+}
 
 main {
 	padding: 40px;
+  min-height: 700px;
 }
 main.blur-bg {
   position: relative;
 
 	height: 86%;
 	padding: 0;
+}
+
+a {
+  cursor: pointer;
 }
 
 .w100 {
@@ -443,7 +478,6 @@ main a {
 }
 main a:hover {
 	color: #FFB942;
-  text-decoration: underline;
 }
 
 p {
@@ -472,4 +506,9 @@ p {
     margin: 0.5rem;
     color: rgba(255,255,255,0.5);
     position: relative;
+}
+
+.black a {
+  color: #000;
+  opacity: 60%;
 }
