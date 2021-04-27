@@ -17,17 +17,16 @@
     </div>
     <div class="items">
       <a href="/index.php" class="button first">HOME</a>
-      <a href="/php/character.php" class="button active">CHARACTERS</a>
+      <a class="button active">CHARACTERS</a>
 
       <div class="dropdown">
         <a class="button">ITEMS</a>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
+          <a href="/php/weapon.php">Weapons</a>
+          <a href="/php/material.php">Materials</a>
         </div>
       </div>
-      <a href="" class="button second">GUIDES</a>
-      <a href="" class="button">DPS CALCULATOR</a>
-      <a href="" class="button">WORLD MAP</a>
+      <a href="/php/guide.php" class="button">GUIDES</a>
     </div>
     <div class="login-div <?php echo isset($_SESSION['username'])
      ? ' dropdown'  : '' ; ?>">
