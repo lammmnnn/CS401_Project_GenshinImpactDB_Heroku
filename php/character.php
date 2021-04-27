@@ -88,9 +88,9 @@
   <footer class="footer">
     <hr>
     <ul class="footer__nav">
-      <a href="/about"> About </a>
-      <a href="/contact"> Contact </a>
-      <a href="/disclaimer"> Disclaimer </a>
+      <a href="/about.php"> About </a>
+      <a href="/about.php"> Contact </a>
+      <a href="/about.php"> Disclaimer </a>
     </ul>
     <p><span>©&nbsp;2021&nbsp; Genshin Impact Database</span></p>
   </footer>
