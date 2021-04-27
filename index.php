@@ -19,7 +19,8 @@
       <div class="dropdown">
         <a class="button">ITEMS</a>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
+          <a href="/php/weapon.php">Weapons</a>
+          <a href="/php/material.php">Materials</a>
         </div>
       </div>
       <a href="" class="button second">GUIDES</a>
